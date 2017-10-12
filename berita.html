@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>GerbangDesa</title>
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+
+    <meta name="description" content="">
+
+    <!-- CSS -->
+    <link href="assets/css/preload.css" rel="stylesheet">
+
+    <!-- Compiled in vendors.js -->
+    <!--
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/slidebars.min.css" rel="stylesheet">
+    <link href="assets/css/lightbox.css" rel="stylesheet">
+    <link href="assets/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="assets/css/buttons.css" rel="stylesheet">
+    -->
+
+    <link href="assets/css/vendors.css" rel="stylesheet">
+    <link href="assets/css/syntaxhighlighter/shCore.css" rel="stylesheet" >
+
+    <!-- RS5.0 Stylesheet -->
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/navigation.css">-->
+
+    <link href="assets/css/style-blue.css" rel="stylesheet" title="default">
+    <link href="assets/css/width-full.css" rel="stylesheet" title="default">
+  <link rel='stylesheet prefetch' href='slick.min.css'>
+<link rel='stylesheet prefetch' href='slick-theme.min.css'>
+<script src="jquery-3.2.1.min.js" type="application/javascript"></script>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<body>
+
+<div class="sb-site-container">
+<div class="boxed">
+
+<header id="header-full-top" class="hidden-xs header-full">
+    <div class="container">
+        <div class="header-full-title">
+            <h1 class="animated fadeInRight"><a href="index.html"></a></h1>
+            <p class="animated fadeInRight"></p>
+        </div>
+        
+        <nav class="top-nav">
+            
+            
+            <div class="dropdown animated fadeInDown animation-delay-11">
+                
+                <a href="#" class="dropdown-toggle btn btn-ar btn-sm btn-default" data-toggle="dropdown"><i class="fa fa-user"></i> Masuk</a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-login-box animated flipCenter">
+                    <form role="form">
+                        <h4>Login Form</h4>
+
+                        <div class="form-group">
+                            <div class="input-group login-input">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Username">
+                            </div>
+                            <br>
+                            <div class="input-group login-input">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="checkbox pull-left">
+                                  <input type="checkbox" id="checkbox_remember1">
+                                  <label for="checkbox_remember1">
+                                     Remember me
+                                  </label>
+                            </div>
+                            <button type="submit" class="btn btn-ar btn-primary pull-right">Login</button>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            <div class="dropdown animated fadeInDown animation-delay-11">
+                <a href="daftar.html" class="dropdown-toggle btn btn-ar btn-sm btn-default"><i class="fa fa-user-plus"></i> Daftar</a>
+            </div>
+            </div>
+        </nav>
+    </div> <!-- container -->
+
+</header> <!-- header-full -->
+<nav class="navbar navbar-default navbar-header-full navbar-dark yamm navbar-static-top" role="navigation" id="header">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+            <a id="ar-brand" class="navbar-brand hidden-lg hidden-md hidden-sm" href="index.html">GERBANG <span>desa</span></a>
+        </div> <!-- navbar-header -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="width:1380px;">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="berita.html">Berita</a>
+                </li>
+                <li>
+                    <a href="about.html">Tentang Kami</a>
+                </li>
+                <li>
+                    <a href="contact.html">Hubungi Kami</a>
+                </li>
+             </ul>
+           <div class="col-sm-6" style="padding-top:7px;">
+    		<form role="form" action="search_produk.html">
+            <div class="input-group login-input">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Produk apa yang Anda cari?">
+                </div>
+            </form>
+            
+           </div>
+           <div style="padding-top:7px;">
+                <img src="assets/img/keranjang.png" alt="" class="dropdown-toggle" data-toggle="dropdown"><div class="notifications red">4</div>
+                <div class="dropdown-menu dropdown-menu-right dropdown-login-box animated flipCenter col-sm-3 no-margin">
+						<div class="col-md-12">
+                        <h3 class="no-margin-top" align="center">Keranjang Belanja</h3>
+                        		<ul class="list-group">
+                            		<li class="list-group-item" style="color:#333"><span class="badge badge-primary">Rp 649.000</span> Beras Cianjur</li>
+                            		<li class="list-group-item" style="color:#333"><span class="badge badge-primary">Rp 649.000</span> Jaring</li>
+                            		<li class="list-group-item" style="color:#333"><span class="badge badge-primary">Rp 649.000</span> Pancingan</li>
+                            		<li class="list-group-item" style="color:#333"><span class="badge badge-primary">Rp 649.000</span> Angklung</li>
+                        		</ul>
+							<div class="ec-box-header italic col-sm-12">
+                        			<p style="color:#333">TOTAL : Rp 649.000</p>
+                        	</div>
+                        			<a href="detailkeranjang.html"><p style="color:#333" align="center">Detail Keranjang</p></a>
+                    	</div>
+                </div>
+           </div>
+        </div><!-- navbar-collapse -->
+        
+    </div><!-- container -->
+</nav>
+<!--
+<header class="wrap-polygons ar-intro-product">
+        <div class="container text-center">
+            <h1 class="small-caps">Best Pulsa</h1>
+            <img src="assets/img/demo/firefox2.png" class="wow fadeInUp animation-delay-4 img-responsive aligncenter img-po" alt="">
+        </div>
+</header>
+
+<!-- -------------------------------------------------------------------- -->
+
+<header class="main-header">
+    <div class="container">
+        <h1 class="page-title">Berita</h1>
+
+        </div>
+</header>
+
+
+
+
+
+<!-- --------------------------------------------- -->
+<script src="berita.js" type="application/javascript"></script>
+		<!-- ---------INI TEMPLATE------------------ -->
+		<script id="berita-template" type="text/x-custom-template">
+            <article class="post animated fadeInDown animation-delay-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="post-title"><a href="single.html" class="transicion">{judul}</a></h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="http://103.245.181.211/gerbangdesa/assets/img/{image}" class="img-responsive imageborder" alt="Image">
+                            </div>
+                            <div class="col-md-6">
+                                <p>{berita}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-lg-10 col-md-9 col-sm-4">
+                                <i class="fa fa-clock-o"></i> 04 September 2017 <i class="fa fa-user"> </i> <a href="#">Admin</a>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                <a href="#" class="pull-right">Selengkapnya &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+		</script>
+        
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12" id="berita">
+
+        </div> <!-- col-md-8 -->
+		
+        	<section>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </section>
+        
+    </div> <!-- row -->
+</div>
+     
+     
+    
+    
+<aside id="footer-widgets">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="footer-widget-title">CENTER TRANSAKSI SMS</h3>
+                <ul class="list-unstyled one_cols">
+                    <li>AXIS      : 083865806655</li>
+                    <li>INDOSAT   : 085712727454</li>
+                    <li>TELKOMSEL : 08111455134</li>
+                    <li>TELKOMSEL : 082324433134</li>
+                    <li>TRI       : 089512787773</li>
+                </ul>
+                <!-- /input-group -->
+            </div>
+            <div class="col-md-4">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">INFO / BANTUAN / KOMPLAIN CS</h3>
+                	<ul class="list-unstyled">
+                    	<li>SMS  : 081211110999</li>
+                    	<li>WHATSAPP  : 081211110999</li>
+                    	<li>BBM: qwe12300</li>
+                    	<li>TELEGRAM CHANNEL  : @gerbangdesacoid</li>
+                    	<li>TELEGRAM  : @gerbangdesabot</li>
+                </ul>     
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title"></h3><br><br>
+                	<ul class="list-unstyled">
+                    	<li>FACEBOOK  : facebook.com/gerbangdesa</li>
+                    	<li>LINE  : @yxq0157r</li>
+                    	<li>EMAIL  : admin@gerbangdesa.co.id</li>
+                    	<li>GTALK / HANGOUTS  : gerbangdesa@gmail.com</li>
+                   		<li>TWITTER  : @gerbangdesaTrx</li>
+                </ul>     
+                </div>
+            </div>
+            </div> <!-- row -->
+    </div> <!-- container -->
+</aside> <!-- footer-widgets -->
+<footer id="footer">
+    <p>&copy; 2017 <strong>GerbangDesa.co.id</strong>, inc. All rights reserved.</p>
+</footer>
+
+</div> <!-- boxed -->
+</div> <!-- sb-site -->
+
+
+<!-- Scripts -->
+<!-- Compiled in vendors.js -->
+<!--
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-switch.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/slidebars.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/buttons.js"></script>
+<script src="assets/js/jquery.mixitup.min.js"></script>
+<script src="assets/js/circles.min.js"></script>
+<script src="assets/js/masonry.pkgd.min.js"></script>
+<script src="assets/js/jquery.matchHeight-min.js"></script>
+-->
+
+<script src="assets/js/vendors.js"></script>
+
+<!--<script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+<script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>-->
+
+
+<!-- Syntaxhighlighter -->
+<script src="assets/js/syntaxhighlighter/shCore.js"></script>
+<script src="assets/js/syntaxhighlighter/shBrushXml.js"></script>
+<script src="assets/js/syntaxhighlighter/shBrushJScript.js"></script>
+
+<script src="assets/js/DropdownHover.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/e-commerce_product.js"></script>
+<script src="assets/js/commerce.js"></script>
+
+</body>
+
+</html>

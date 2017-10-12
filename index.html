@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>GerbangDesa</title>
+
+	<link rel="shortcut icon" href="assets/img/favicon.png" />
+
+	<meta name="description" content="">
+	<link href="assets/css/preload.css" rel="stylesheet">
+
+	<link href="assets/css/vendors.css" rel="stylesheet">
+	<link href="assets/css/syntaxhighlighter/shCore.css" rel="stylesheet">
+
+	<link href="assets/css/style-blue.css" rel="stylesheet" title="default">
+	<link href="assets/css/width-full.css" rel="stylesheet" title="default">
+	<link rel='stylesheet prefetch' href='slick.min.css'>
+	<link rel='stylesheet prefetch' href='slick-theme.min.css'>
+	<script src="jquery-3.2.1.min.js" type="application/javascript"></script>
+	<script src="gerbangdesa_utils.js" type="application/javascript"></script>
+	<script src="kategori.js" type="application/javascript"></script>
+</head>
+
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
+
+<body>
+
+	<div class="sb-site-container">
+		<div class="boxed">
+
+			<header id="header-full-top" class="hidden-xs header-full">
+				<div class="container">
+					<div class="header-full-title">
+						<h1 class="animated fadeInRight"><a href="index.html"></a></h1>
+						<p class="animated fadeInRight"></p>
+					</div>
+
+					<nav class="top-nav">
+
+
+						<div class="dropdown animated fadeInDown animation-delay-5">
+
+							<a href="#" class="dropdown-toggle btn btn-ar btn-sm btn-default" data-toggle="dropdown"><i class="fa fa-user"></i> Masuk</a>
+							<div class="dropdown-menu dropdown-menu-right dropdown-login-box animated flipCenter">
+								<form role="form">
+									<h4>Login Form</h4>
+
+									<div class="form-group">
+										<div class="input-group login-input">
+											<span class="input-group-addon"><i class="fa fa-user"></i></span>
+											<input type="text" class="form-control" placeholder="Username">
+										</div>
+										<br>
+										<div class="input-group login-input">
+											<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+											<input type="password" class="form-control" placeholder="Password">
+										</div>
+										<div class="checkbox pull-left">
+											<input type="checkbox" id="checkbox_remember1">
+											<label for="checkbox_remember1">
+                                     Remember me
+                                  </label>
+										</div>
+										<button type="submit" class="btn btn-ar btn-primary pull-right">Login</button>
+										<div class="clearfix"></div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="dropdown animated fadeInDown animation-delay-9">
+							<a href="daftar.html" class="dropdown-toggle btn btn-ar btn-sm btn-default"><i class="fa fa-user-plus"></i> Daftar</a>
+						</div>
+				</div>
+				</nav>
+		</div>
+		<!-- container -->
+
+		</header>
+		<!-- header-full -->
+		<nav class="navbar navbar-default navbar-header-full navbar-dark yamm navbar-static-top" role="navigation" id="header">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+					<a id="ar-brand" class="navbar-brand hidden-lg hidden-md hidden-sm" href="index.html">GERBANG <span>desa</span></a>
+				</div>
+				<!-- navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="width:1380px;">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="berita.html">Berita</a>
+						</li>
+						<li>
+							<a href="about.html">Tentang Kami</a>
+						</li>
+						<li>
+							<a href="contact.html">Hubungi Kami</a>
+						</li>
+					</ul>
+					<div class="col-sm-6" style="padding-top:7px;">
+						<form role="form" action="search_produk.html">
+							<div class="input-group login-input">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+								<input type="text" class="form-control" placeholder="Produk apa yang Anda cari?">
+							</div>
+						</form>
+
+					</div>
+					<div style="padding-top:7px;">
+						<img src="assets/img/keranjang.png" alt="" class="dropdown-toggle" data-toggle="dropdown">
+						<div class="notifications red">4</div>
+						<div class="dropdown-menu dropdown-menu-right dropdown-login-box animated flipCenter col-sm-3 no-margin">
+							<div class="col-md-12">
+								<h3 class="no-margin-top" align="center">Keranjang Belanja</h3>
+								<ul class="list-group">
+									<li class="list-group-item" style="color:#333"><span class="badge badge-primary">Rp 649.000</span> Beras Cianjur</li>
+									<li class="list-group-item" style="color:#333"><span class="badge badge-primary">Rp 649.000</span> Jaring</li>
+									<li class="list-group-item" style="color:#333"><span class="badge badge-primary">Rp 649.000</span> Pancingan</li>
+									<li class="list-group-item" style="color:#333"><span class="badge badge-primary">Rp 649.000</span> Angklung</li>
+								</ul>
+								<div class="ec-box-header italic col-sm-12">
+									<p style="color:#333">TOTAL : Rp 649.000</p>
+								</div>
+								<a href="detailkeranjang.html">
+									<p style="color:#333" align="center">Detail Keranjang</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- navbar-collapse -->
+
+			</div>
+			<!-- container -->
+		</nav>
+		<!--
+<header class="wrap-polygons ar-intro-product">
+        <div class="container text-center">
+            <h1 class="small-caps">Best Pulsa</h1>
+            <img src="assets/img/demo/firefox2.png" class="wow fadeInUp animation-delay-4 img-responsive aligncenter img-po" alt="">
+        </div>
+</header>
+
+<!-- -------------------------------------------------------------------- -->
+		<div class="container">
+			<div class="col-md-12">
+
+				<div class="col-sm-6 hidden-lg hidden-md hidden-sm" style="padding-top:7px;">
+
+					<form role="form" action="search_produk.html">
+						<div class="input-group login-input">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+							<input type="text" class="form-control" placeholder="Produk apa yang Anda cari?">
+						</div>
+					</form>
+				</div>
+
+				<section class="css-section">
+
+					<div class="row">
+
+						<div class="col-md-6">
+
+							<section class="margin-bottom animated fadeInLeftBig animation-delay-3">
+								<ul class="bxslider" id="latest-works">
+									<li>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic no-margin"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+											<div class="ec-box">
+												<a href="produk.html"><img src="assets/img/demo/beras2.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+												<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a>
+													<p>Rp 649.000</p>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="bxslider-controls">
+									<span id="bx-prev4"></span>
+									<span id="bx-next4"></span>
+								</div>
+							</section>
+
+						</div>
+
+						<div class="col-md-6">
+							<div class="block animated fadeInDown animation-delay-10">
+								<ul class="nav nav-tabs nav-tabs-ar" id="myTab2">
+									<li class="active"><a href="#fav" data-toggle="tab" style="font-size:15px;"> Token PLN</a></li>
+									<li><a href="#categories" data-toggle="tab"> Isi Pulsa</a></li>
+									<li><a href="#archive" data-toggle="tab"> Paket Data</a></li>
+									<li><a href="#tags2" data-toggle="tab"> Voucher Game</a></li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane active" id="fav">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="InputPassword">No. Meteran PLN</label>
+													<input type="text" class="form-control" id="InputPassword">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="nohp">Nominal Token</label><br>
+													<select name="nominal" id="nohp" class="form-control">
+      										<option>Rp 5,000</option>
+      										<option>Rp 10,000</option>
+      										<option>Rp 15,000</option>
+      										<option>Rp 20,000</option>
+      										<option>Rp 25,000</option>
+      										<option>Rp 50,000</option>
+      										<option>Rp 100,000</option>
+   		 							</select>
+												</div>
+												<div align="left">
+													<button type="submit" class="btn btn-ar btn-primary pull-right">Lanjutkan</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane" id="archive">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="InputPassword">No. Handphone Anda</label>
+													<input type="text" class="form-control" id="InputPassword">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="nohp">Nominal Pulsa</label><br>
+													<select name="nominal" id="nohp" class="form-control">
+      										<option>Rp 5,000</option>
+      										<option>Rp 10,000</option>
+      										<option>Rp 15,000</option>
+      										<option>Rp 20,000</option>
+      										<option>Rp 25,000</option>
+      										<option>Rp 50,000</option>
+      										<option>Rp 100,000</option>
+   		 							</select>
+												</div>
+												<div align="left">
+													<button type="submit" class="btn btn-ar btn-primary pull-right">Lanjutkan</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane" id="categories">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="InputPassword">No. Handphone Anda</label>
+													<input type="text" class="form-control" id="InputPassword">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="nohp">Paket Data</label><br>
+													<select name="nominal" id="nohp" class="form-control">
+      										<option>Rp 5,000</option>
+      										<option>Rp 10,000</option>
+      										<option>Rp 15,000</option>
+      										<option>Rp 20,000</option>
+      										<option>Rp 25,000</option>
+      										<option>Rp 50,000</option>
+      										<option>Rp 100,000</option>
+   		 							</select>
+												</div>
+												<div align="left">
+													<button type="submit" class="btn btn-ar btn-primary pull-right">Lanjutkan</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane" id="tags2">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="InputPassword">No. Handphone Anda</label>
+													<input type="text" class="form-control" id="InputPassword">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="nohp">Nominal Voucher</label><br>
+													<select name="nominal" id="nohp" class="form-control">
+      										<option>Rp 5,000</option>
+      										<option>Rp 10,000</option>
+      										<option>Rp 15,000</option>
+      										<option>Rp 20,000</option>
+      										<option>Rp 25,000</option>
+      										<option>Rp 50,000</option>
+      										<option>Rp 100,000</option>
+   		 							</select>
+												</div>
+												<div align="left">
+													<button type="submit" class="btn btn-ar btn-primary pull-right">Lanjutkan</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- tab-content -->
+								</div>
+							</div>
+
+							<div id="carousel-example-captions" class="carousel carousel-images slide padding-20 animated fadeInRightBig animation-delay-10" data-ride="carousel">
+								<div class="carousel-inner">
+									<div class="item active">
+										<img src="assets/img/demo/avent1.jpg" alt="First slide image">
+
+									</div>
+									<div class="item">
+										<img src="assets/img/demo/avent2.jpg" alt="Second slide image">
+
+									</div>
+									<div class="item">
+										<img src="assets/img/demo/avent3.jpg" alt="Third slide image">
+
+									</div>
+								</div>
+								<a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+								<a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+							</div>
+						</div>
+
+					</div>
+				</section>
+			</div>
+		</div>
+
+
+		<!-- --------------------------------------------- -->
+		<script src="penjual.js" type="application/javascript"></script>
+
+		<script id="penjual-template" type="text/x-custom-template">
+			<div class="col-sm-6 col-md-6 col-lg-4">
+				<div class="panel panel-default panel-card">
+					<div class="panel-heading">
+						<img src="{image_penjual}" />
+					</div>
+
+					<div class="panel-body text-center">
+						<h4 class="panel-header"><a href="#">{title_penjual}</a></h4>
+						<small>{abstraction_penjual}</small>
+					</div>
+
+				</div>
+			</div>
+		</script>
+
+		<div class="container">
+
+			<div class="col-md-12">
+				<ul id="kategori" class="nav nav-pills nav-justified ar-nav-pills center-block margin-bottom"></ul>
+
+				<div class="tab-content margin-top">
+
+					<div class="tab-pane active" id="cat1">
+						<div class="col-md-12">
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/berascianjur.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Beras Cianjur</a><br>
+
+										<p>Rp 550,000</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/bibitjagung.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Bibit Jagung</a><br>
+
+										<p>Rp 50,000</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/pembasmihama.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Pembasmi Serangga</a><br>
+
+										<p>Rp 50,000</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<p align="center"><a href="#" class="button button-raised button-primary button-pill">Lihat Selengkapnya</a></p><br>
+
+					</div>
+
+					<div class="tab-pane" id="cat2">
+						<div class="col-md-12">
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/bibitlele.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Bibit Ikan Lele</a><br>
+
+										<p>Rp 150,000</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/obatikan.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Obat Ikan</a><br>
+
+										<p>Rp 50,000</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/purayam.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Pur Ayam</a><br>
+
+										<p>Rp 80,000</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/makananbebek.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Makanan Bebek</a><br>
+
+										<p>Rp 80,000</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p align="center"><a href="#" class="button button-raised button-primary button-pill">Lihat Selengkapnya</a></p><br>
+					</div>
+
+					<div class="tab-pane" id="cat3">
+						<div class="col-md-12">
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/keranjangkoran.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Kerajinan Keranjang Koran</a><br>
+
+										<p>Rp 350,000</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p align="center"><a href="#" class="button button-raised button-primary button-pill">Lihat Selengkapnya</a></p><br>
+					</div>
+
+					<div class="tab-pane" id="cat4">
+						<div class="col-md-12">
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/ubicilembu.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Ubi Cilembu Bakar</a><br>
+
+										<p>Rp 250,000</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 mix category-smartphone" data-price="64900" data-date="20130521" data-popularity="3">
+								<div class="ec-box">
+									<a href="produk.html"><img src="assets/img/demo/dodolbetawi.jpg" alt="" class="padding-top-20 margin-bottom"></a>
+									<div class="ec-box-header italic"><a href="produk.html">Dodol Betawi Asli</a><br>
+
+										<p>Rp 50,000</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p align="center"><a href="#" class="button button-raised button-primary button-pill">Lihat Selengkapnya</a></p><br>
+					</div>
+				</div>
+
+				<!-- Panel Code -->
+
+			</div>
+
+		</div>
+
+
+		<script src="produk_laris.js" type="application/javascript"></script>
+		<div class="overlay">
+			<div class="container">
+				<h3 class="no-margin-top">PRODUK TERLARIS</h3>
+				<div class="row">
+					<div id="produk_laris" class="col-md-12"></div>
+					<p align="center"><a href="#" class="button button-raised button-primary button-pill">Lihat Selengkapnya</a></p><br>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="berita_terbaru.js" type="application/javascript"></script>
+		<div class="overlay">
+			<div class="container">
+				<h3 class="no-margin-top">BERITA</h3>
+				<section class="margin-bottom">
+					<div class="row">
+						<!-- --------------DATA TAMPIL---------------- -->
+						<div id="berita" class="row masonry-container"></div>
+					</div>
+					<!-- row -->
+				</section>
+			</div>
+			<!-- container -->
+			<!-- container -->
+			<script src="footer.js" type="application/javascript"></script>
+			<div id="page_footer"></div>
+		</div>
+		<!-- boxed -->
+	</div>
+	<!-- sb-site -->
+
+
+	<!-- Scripts -->
+	<!-- Compiled in vendors.js -->
+	<!--
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-switch.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/slidebars.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/buttons.js"></script>
+<script src="assets/js/jquery.mixitup.min.js"></script>
+<script src="assets/js/circles.min.js"></script>
+<script src="assets/js/masonry.pkgd.min.js"></script>
+<script src="assets/js/jquery.matchHeight-min.js"></script>
+-->
+
+	<script src="assets/js/vendors.js"></script>
+
+	<!--<script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+<script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>-->
+
+
+	<!-- Syntaxhighlighter -->
+	<script src="assets/js/syntaxhighlighter/shCore.js"></script>
+	<script src="assets/js/syntaxhighlighter/shBrushXml.js"></script>
+	<script src="assets/js/syntaxhighlighter/shBrushJScript.js"></script>
+
+	<script src="assets/js/DropdownHover.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/holder.js"></script>
+	<script src="assets/js/commerce.js"></script>
+	<script src="assets/js/index.js"></script>
+
+</body>
+
+</html>
