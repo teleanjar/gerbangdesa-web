@@ -3,8 +3,8 @@
 //===========================================================================
 $(document).ready(function(){
 
-$.getJSON("http://103.245.181.211/gerbangdesa/api/kategori/", function(jsonData) {
-	$.each(jsonData,function(index,data){
+$.getJSON("http://103.245.181.211/gerbangdesa/api/katproduk", function(jsonData) {
+	$.each(jsonData.data,function(index,data){
 		$('#kategori').append(render(getTemplate(data.id==1),data));
 	});
 });

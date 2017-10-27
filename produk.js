@@ -4,8 +4,8 @@
 $(document).ready(function() {
     var template = $('#produk-template').html();
     var id_produk = getUrlParameter("id_produk");
-	$.getJSON("http://103.245.181.211/gerbangdesa/api/produk/?id_produk=" + id_produk, function(jsonData) {
-        $.each(jsonData, function(key, value) {
+	$.getJSON("http://103.245.181.211/gerbangdesa/api/produk/" + id_produk, function(jsonData) {
+        $.each(jsonData.data, function(key, value) {
             if (key == "produk") {
                 $("#produk_judul").html(value);
             } else if (key == "keterangan") {

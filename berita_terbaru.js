@@ -18,8 +18,9 @@ var template =
         "</div>"
 ;
 
-$.getJSON("http://103.245.181.211/gerbangdesa/api/beritaterbaru/", function(jsonData) {
-	$.each(jsonData,function(index,data){
+$.getJSON("http://103.245.181.211/gerbangdesa/api/berita/terbaru", function(jsonData) {
+	$.each(jsonData.data,function(index,data){
+		data.isi = data.isi.substring(1,200) + "...";
 		$('#berita').append(render(template,data));
 	});
 });
